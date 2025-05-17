@@ -124,16 +124,23 @@ export function buildTray(): void {
   const minsLeft = breakTime?.diff(moment(), "minutes");
 
   let nextBreak = "";
+  let trayTime = ''
 
   if (minsLeft !== undefined) {
     if (minsLeft > 1) {
       nextBreak = `Next break in ${minsLeft} minutes`;
+      trayTime = `${minsLeft}m`;
     } else if (minsLeft === 1) {
       nextBreak = `Next break in 1 minute`;
+      trayTime = `1m`;
     } else {
       nextBreak = `Next break in less than a minute`;
+      trayTime = `<1m`;
     }
   }
+  tray.setToolTip(nextBreak);
+  tray.setTitle(trayTime);
+  
 
   const disableEndTime = getDisableEndTime();
 
