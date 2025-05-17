@@ -24,6 +24,7 @@ export function SoundSelect({ value, onChange, disabled }: SoundSelectProps) {
         style={{ flex: 1 }}
       >
         <option value={SoundType.None}>None</option>
+        <option value={SoundType.Jungle}>Jungle</option>
         <option value={SoundType.Gong}>Gong</option>
         <option value={SoundType.Blip}>Blip</option>
         <option value={SoundType.Bloop}>Bloop</option>

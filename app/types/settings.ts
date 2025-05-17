@@ -20,6 +20,7 @@ export enum SoundType {
   Bloop = "BLOOP",
   Ping = "PING",
   Scifi = "SCIFI",
+  Jungle = "JUNGLE",
 }
 
 export interface Settings {
